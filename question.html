@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест по безопасности - Вопрос</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title" id="stageTitle">Этап 1: Парольная защита</h1>
+    </header>
+
+    <main class="content">
+        <div class="question-container">
+            <p id="questionText" class="question-text">Какой из следующих паролей является самым надежным?</p>
+            <form id="questionForm">
+                <label>
+                    <input type="radio" name="answer" value="1"> 123456
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="2"> password
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="3"> P@ssw0rd!2023
+                </label><br>
+            </form>
+            <button type="button" class="submit-button" onclick="checkAnswer()">Ответ</button>
+            <button type="button" class="continue-button" style="display:none;"
+                onclick="nextQuestion()">Продолжить</button>
+            <p id="result" class="result-text"></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        © КиберКвест 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
