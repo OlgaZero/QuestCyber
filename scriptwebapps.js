@@ -22,7 +22,7 @@ bot.onText(/\/start/, (msg) => {
         [
           {
             text: "Начать квест",
-            url: "https://QuestCyber.vercel.app", // Замените на ваш URL
+            url: "https://questcyber.vercel.app", // Замените на ваш URL
           },
         ],
       ],
