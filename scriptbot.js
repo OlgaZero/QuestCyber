@@ -12,6 +12,21 @@ app.post(`/webhook/${token}`, (req, res) => {
   res.sendStatus(200);
 });
 
+// Функция для установки вебхука
+const setWebhook = async () => {
+  const webhookUrl = `https://quest-cyber.vercel.app/webhook/${token}`;
+  await bot.setWebHook(webhookUrl);
+};
+
+// Вызов функции установки вебхука
+setWebhook()
+  .then(() => {
+    console.log("Webhook установлен:", webhookUrl);
+  })
+  .catch((err) => {
+    console.error("Ошибка установки вебхука:", err);
+  });
+
 // Обработка текстовых сообщений
 bot.on("message", (msg) => {
   const chatId = msg.chat.id;
@@ -28,7 +43,7 @@ bot.onText(/\/start/, (msg) => {
     reply_markup: {
       inline_keyboard: [
         [
-          { text: "Начать квест", url: "https://quest-cyber.vercel.app" }, // Замените на ваш URL
+          { text: "Начать квест", url: "https://quest-cyber.vercel.app" }, // URL вашего приложения
         ],
       ],
     },
