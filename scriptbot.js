@@ -28,7 +28,7 @@ bot.onText(/\/start/, (msg) => {
     reply_markup: {
       inline_keyboard: [
         [
-          { text: "Начать квест", url: "https://questcyber.vercel.app" }, // Замените на ваш URL
+          { text: "Начать квест", url: "https://quest-cyber.vercel.app" }, // Замените на ваш URL
         ],
       ],
     },
