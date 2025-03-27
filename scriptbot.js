@@ -1,10 +1,8 @@
-/* Cерверный код,обработчик для команд: */
-
 const TelegramBot = require("node-telegram-bot-api");
 const express = require("express");
 const app = express();
 
-const token = "7687467201:AAH_D9nl-eOUH8-oPxSk-f4ZZqRN07zWWM0"; //  токен вашего бота
+const token = process.env.BOT_TOKEN; // Используйте переменную среды для токена
 const bot = new TelegramBot(token);
 
 // Установка вебхука
@@ -30,10 +28,7 @@ bot.onText(/\/start/, (msg) => {
     reply_markup: {
       inline_keyboard: [
         [
-          {
-            text: "Начать квест",
-            url: "https://olgazero.github.io/QuestCyber/index.html",
-          },
+          { text: "Начать квест", url: "https://QuestCyber.vercel.app" }, // Замените на ваш URL
         ],
       ],
     },
